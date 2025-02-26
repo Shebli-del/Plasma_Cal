@@ -1,3 +1,5 @@
+library(shinythemes)
+
 ui <- fluidPage(theme = shinytheme("cerulean"),
                 navbarPage(
                   "My first app",
