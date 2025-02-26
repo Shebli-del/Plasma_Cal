@@ -26,7 +26,8 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                         value = 0,
                         step= 0.1),
             checkboxInput("IgG", "IgG", value = F),
-            checkboxInput("KLratio", "K/L ratio is abnormal (<0.26-1.65>):", value = F)
+            checkboxInput("KLratio", "K/L ratio is abnormal (<0.26-1.65>):",
+                          value = F)
         ),
 
         # Show a plot of the generated distribution
@@ -54,10 +55,15 @@ server <- function(input, output) {
       Second <- ifelse(input$IgG==T,0,1)
       Third <- ifelse(input$KLratio==T,1,0)
       total <- First+Second+Third
-      Sum <- ifelse(total==0, "Risk of progression is 5% in 20 years",
-                    ifelse(total==1, "Risk of progression is 21% in 20 years",
-                           ifelse (total==2, "Risk of progression is 35% in 20 years",
-                                   ifelse(total==3, "Risk of progression is 58% in 20 years",))))
+      Sum <- ifelse(
+        total==0,
+        "Risk of progression is 5% in 20 years",
+        ifelse(total==1,
+               "Risk of progression is 21% in 20 years",
+               ifelse (total==2,
+                       "Risk of progression is 35% in 20 years",
+                       ifelse(total==3,
+                              "Risk of progression is 58% in 20 years",))))
     })
 }
 
