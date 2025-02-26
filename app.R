@@ -48,7 +48,7 @@ server <- function(input, output) {
       First <- ifelse(input$MGUS>=1.5,1,0)
       Second <- ifelse(input$IgG==T,0,1)
       Third <- ifelse(input$KLratio==T,1,0)
-      total <- First+Second+Third
+      Risk <- First+Second+Third
     })
     output$Sum <- reactive ({
       First <- ifelse(input$MGUS>1.5,1,0)
