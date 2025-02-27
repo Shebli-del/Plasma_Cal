@@ -54,7 +54,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                            max = 100,
                                            value = 0,
                                            step= 1),
-                           )),
+                           ),
                            mainPanel(
                              tags$label(h3('Number of Risk factors:')), # title Text Box
                              h1(textOutput("Risk2")),
