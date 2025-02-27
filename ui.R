@@ -4,6 +4,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                 navbarPage(
                   "My first app",
                   tabPanel("MGUS calculator",
+                          " MGUS Mayo clinic PMID: 11856795, 15855274" ,
                            # Sidebar with a slider input for number of bins 
                            sidebarLayout(
                              sidebarPanel(
@@ -26,5 +27,35 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                h1(textOutput('Sum'))
                              )
                            ))    ,
-                  tabPanel("Smoldering Myeloma", "This panel is intentionally left blank"))
+                  tabPanel("Smoldering Myeloma",
+                           "Smoldering Myeloma Mayo clinic criteria 
+                           (PMID 17942755 & 29895887)",
+                           sidebarLayout(
+                             sidebarPanel(
+                               sliderInput("Smoldering Myeloma",
+                                           "M-spike (g/dL) in blood:",
+                                           min = 0,
+                                           max = 6,
+                                           value = 0,
+                                           step= 0.1),
+                               sliderInput("Bone marrow biopsy",
+                                           "Plasma cells percentage",
+                                           min = 0,
+                                           max = 100,
+                                           value = 0,
+                                           step= 1),
+                               sliderInput("Blood",
+                                           "Free light chain ratio K/L",
+                                           min = 0,
+                                           max = 100,
+                                           value = 0,
+                                           step= 1),
+                           )),
+                           mainPanel(
+                             tags$label(h3('Number of Risk factors:')), # title Text Box
+                             h1(textOutput("Risk")),
+                             tags$label(h3('Risk of progression to myeloma:')),
+                             h1(textOutput('Sum'))
+                           )
+                  ))
 )
