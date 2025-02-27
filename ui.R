@@ -3,6 +3,8 @@ library(shinythemes)
 ui <- fluidPage(theme = shinytheme("cerulean"),
                 navbarPage(
                   "My first app",
+                  
+                  
                   tabPanel("MGUS calculator",
                           " MGUS Mayo clinic PMID: 11856795, 15855274" ,
                            # Sidebar with a slider input for number of bins 
@@ -27,6 +29,8 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                h1(textOutput('Sum'))
                              )
                            ))    ,
+                  
+                  
                   tabPanel("Smoldering Myeloma",
                            "Smoldering Myeloma Mayo clinic criteria 
                            (PMID 17942755 & 29895887)",
@@ -53,9 +57,9 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                            )),
                            mainPanel(
                              tags$label(h3('Number of Risk factors:')), # title Text Box
-                             h1(textOutput("Risk")),
+                             h1(textOutput("Risk2")),
                              tags$label(h3('Risk of progression to myeloma:')),
-                             h1(textOutput('Sum'))
+                             h1(textOutput('Sum2'))
                            )
                   ))
 )
