@@ -4,7 +4,6 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                 navbarPage(
                   "My first app",
                   
-                  
                   tabPanel("MGUS calculator",
                           " MGUS Mayo clinic PMID: 11856795, 15855274" ,
                            # Sidebar with a slider input for number of bins 
@@ -61,5 +60,10 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                              tags$label(h3('Risk of progression to myeloma:')),
                              h1(textOutput('Sum2'))
                            )
-                  ))
+                  )
+                  # below close tabpanel
+                  )
+                  # below close nav panel
+                )
+# close fluid page
 )
