@@ -59,7 +59,7 @@ server <- function(input, output) {
       "Risk of progression is 59% in 5 years",
       ifelse(total==1,
              "Risk of progression is 69% in 5 years",
-             ifelse (total==2 | total==3,
+             ifelse (total==2 | total==3 | total==4,
                      "Risk of progression is 100% in 5 years","None")
                     ))
   })
