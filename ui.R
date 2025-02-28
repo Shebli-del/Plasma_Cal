@@ -22,10 +22,11 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                              
                              # Show a plot of the generated distribution
                              mainPanel(
+                               
                                tags$label(h3('Number of Risk factors:')), # title Text Box
                                h1(textOutput("Risk")),
                                tags$label(h3('Risk of progression to myeloma:')),
-                               h1(textOutput('Sum'))
+                               h1(textOutput('Sum')),
                              )
                            ))    ,
                   
@@ -61,7 +62,12 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                              tags$label(h3('Risk of progression to myeloma:')),
                              h1(textOutput('Sum2', style="color:red")),
                              tags$label(h3('Risk of progression to myeloma counting for genetic mutations:')),
-                             h1(textOutput('Sum3',, style="color:red"))
+                             h1(textOutput('Sum3', style="color:red")),
+                             tags$head(tags$style("#Sum3{color: red;
+                                 font-size: 20px;
+                                 font-style: italic;
+                                 }"
+                             )
                            )
                   )
                   # below close tabpanel
