@@ -64,7 +64,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                              tags$head(tags$style("#Risk2{color: red;
                                  font-size: 40px;
                                  font-style: italic;
-                                 }"))
+                                 }")),
                              tags$label(h3('Risk of progression to myeloma:')),
                              h1(textOutput('Sum2')),
                              tags$head(tags$style("#Sum2{color: red;
