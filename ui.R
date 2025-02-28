@@ -61,19 +61,29 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                            mainPanel(
                              tags$label(h3('Number of Risk factors:')), # title Text Box
                              h1(textOutput("Risk2")),
+                             tags$head(tags$style("#Risk2{color: red;
+                                 font-size: 40px;
+                                 font-style: italic;
+                                 }"))
                              tags$label(h3('Risk of progression to myeloma:')),
                              h1(textOutput('Sum2')),
+                             tags$head(tags$style("#Sum2{color: red;
+                                 font-size: 40px;
+                                 font-style: italic;
+                                 }")),
                              tags$label(h3('Risk of progression to myeloma counting for genetic mutations:')),
                              h1(textOutput('Sum3')),
                              tags$head(tags$style("#Sum3{color: red;
-                                 font-size: 20px;
+                                 font-size: 40px;
                                  font-style: italic;
                                  }"))
                            )
                   )
                   # below close tabpanel
                   )
+                  
                   # below close nav panel
                 )
+                
 # close fluid page
 )
