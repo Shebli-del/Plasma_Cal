@@ -28,6 +28,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                tags$label(h3('Risk of progression to myeloma:')),
                                h1(textOutput('Sum')),
                              )
+                             # below close sidebar
                            )
                           # below close tabpanel
                           )    ,
@@ -78,6 +79,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                  font-style: italic;
                                  }"))
                            )
+                  # below close sidebar
                   )
                   # below close tabpanel
                   )
