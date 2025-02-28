@@ -28,7 +28,9 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                tags$label(h3('Risk of progression to myeloma:')),
                                h1(textOutput('Sum')),
                              )
-                           ))    ,
+                           )
+                          # below close tabpanel
+                          )    ,
                   
                   
                   tabPanel("Smoldering Myeloma",
@@ -66,8 +68,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                              tags$head(tags$style("#Sum3{color: red;
                                  font-size: 20px;
                                  font-style: italic;
-                                 }"
-                             )
+                                 }"))
                            )
                   )
                   # below close tabpanel
