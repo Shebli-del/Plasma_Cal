@@ -53,12 +53,15 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                                            max = 100,
                                            value = 0,
                                            step= 1),
+                               checkboxInput("del17p", "deletion 17p or trisomies", value = F),
                            ),
                            mainPanel(
                              tags$label(h3('Number of Risk factors:')), # title Text Box
                              h1(textOutput("Risk2")),
                              tags$label(h3('Risk of progression to myeloma:')),
-                             h1(textOutput('Sum2'))
+                             h1(textOutput('Sum2')),
+                             tags$label(h3('Risk of progression to myeloma counting for genetic mutations:')),
+                             h1(textOutput('Sum3'))
                            )
                   )
                   # below close tabpanel

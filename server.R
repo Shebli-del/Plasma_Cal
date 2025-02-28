@@ -38,12 +38,30 @@ server <- function(input, output) {
     total <- First+Second+Third
     Sum <- ifelse(
       total==0,
-      "Time to progression is 110 months per revised Mayo criteria",
+      " Median Time to progression is 110 months per revised Mayo criteria",
       ifelse(total==1,
-             "Time to progression is 68 months per revised Mayo criteria",
+             "Median Time to progression is 68 months per revised Mayo criteria",
              ifelse (total==2,
-                     "Time to progression is 29 months per revised Mayo criteria",
+                     "Median Time to progression is 29 months per revised Mayo criteria",
                      ifelse(total==3,
-                            "Time to progression is 29 months per revised Mayo criteria",))))
+                            "Median Time to progression is 29 months per revised Mayo criteria",))))
   })
+  
+  output$Sum3 <- reactive ({
+    First <- ifelse(input$M_spike>2,1,0)
+    Second <- ifelse(input$BMx>20,1,0)
+    Third <- ifelse(input$KLBlood>20,1,0)
+    fourth <- ifelse(input$del17p==T,1,0) 
+    total <- First+Second+Third+fourth
+    Sum <- ifelse(
+      total==0,
+      "Risk of progression is 59% in 5 years",
+      ifelse(total==1,
+             "Risk of progression is 69% in 5 years",
+             ifelse (total==2 | total==3,
+                     "Risk of progression is 100% in 5 years","None")
+                    ))
+  })
+  
+  #below closing main function
 }
