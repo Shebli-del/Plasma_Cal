@@ -44,7 +44,8 @@ server <- function(input, output) {
              ifelse (total==2,
                      "Median Time to progression is 29 months per revised Mayo criteria",
                      ifelse(total==3,
-                            "Median Time to progression is 29 months per revised Mayo criteria",))))
+                            "Median Time to progression is 29 months per revised Mayo criteria",
+                            ))))
   })
   
   output$Sum3 <- reactive ({
